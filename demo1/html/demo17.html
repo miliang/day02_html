@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        body{
+            width: 100%;
+        }
+        #box{
+            position: relative;
+            width: 100%;
+            height: 657px;
+            background-image: url("../../design/images/banner_1.png");
+            background-size: 100%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div id="box"></div>
+</header>
+<script src="../../design/js/jquery-3.1.1.js"></script>
+<script>
+    var bg=['../images/banner_1.png','../images/banner_2.png','../images/banner_3.png',
+    '../images/banner_4.png','../images/banner_5.png','../images/banner_6.png','../images/banner_7.png'];
+    var index=0;
+    var banner = $('#box');
+    console.log(banner);
+    banner.get(0).style.backgroundImage='url('+bg[0]+')';
+    var time = setInterval(dis,3000);
+    function dis() {
+        index++;
+        if(index==bg.length){
+            index=0;
+        }
+        banner.get(0).style.backgroundImage='url('+bg[index]+')';
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css"/>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        
+    </div>
+</div>
+<script>
+    function fun(n,o) {
+        console.log(o);
+        return{
+            fun:function (m) {
+                return fun(m,n);
+            }
+        }
+    }
+    var a = fun(0).fun(1).fun(2).fun(3);
+    console.log(a)
+</script>
+</body>
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            /*outline: solid 1px red;*/
+        }
+        section{
+            position: relative;
+            height: 660px;
+            width: 1366px;
+            overflow: hidden;
+            transition: all .3s linear;
+            background-image: url("../img/bg_01.jpg");
+            background-size: 1366px;
+        }
+        .menu{
+            position: absolute;
+            height: 40px;
+            width: 150px;
+            top:20px;
+            right: 10px;
+        }
+        #div{
+            position: relative;
+            margin:150px 0 0 100px;
+            width: 370px;
+            height: 370px;
+            border-radius: 370px;
+
+        }
+
+        #div p{
+            /*position: absolute;*/
+            color: white;
+            font-family: "微软雅黑";
+        }
+        #title{
+            position: absolute;
+            font-size: 32px;
+            /*margin:30px 0 0 70px;*/
+            top:10%;
+            left:20%;
+        }
+        #desc{
+            position: absolute;
+            width: 300px;
+            height: 120px;
+            /*outline: 1px solid salmon;*/
+            font-size: 14px;
+            /*margin: 30px 0 0 55px;*/
+            top:30%;
+            left: 7%;
+            letter-spacing: 3px;
+        }
+        #pure{
+            position: absolute;
+            top:65%;
+            font-size: 32px;
+            color: white;
+            /*margin-top: 30px;*/
+            overflow: hidden;
+        }
+
+        .menu_top{
+            position: absolute;
+            height: 40px;
+            width: 150px;
+            top:0;
+            z-index: 10;
+            transition: all .1s linear;
+        }
+        .menu_top>span{
+            position: absolute;
+            top:10px;
+            right: 40px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 10;
+        }
+        .menu_img{
+            position: absolute;
+            height: 20px;
+            width: 26px;
+            overflow: hidden;
+            top:10px;
+            left: 40px;
+        }
+        .menu_img>img{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            cursor: pointer;
+        }
+        .menu>.menu_son{
+            position:absolute ;
+            top: -20px;
+            right: -180px;
+            width: 170px;
+            height: 660px;
+            background-color: rgba(0,0,0,.7);
+            z-index: 2;
+            transition: all .3s linear;
+        }
+        .menu>.menu_son>ul{
+            list-style: none;
+        }
+        .menu>.menu_son li:first-child{
+            margin-top: 110px;
+        }
+        .menu>.menu_son li:last-child{
+            font-size: 13px;
+        }
+        .menu>.menu_son li{
+            cursor: pointer;
+            width: 170px;
+            height: 60px;
+            color: #e5e5e5;
+            text-align: center;
+            line-height: 60px;
+            position: relative;
+        }
+        .menu:hover>.menu_son{
+            right: -10px;
+        }
+        .menu_top:hover{
+            outline: solid 2px white;
+        }
+        .menu_cir{
+            width: 12px;
+            height: 12px;
+            overflow: hidden;
+            position: absolute;
+            left: 11px;
+            top:26px;
+            opacity: 0;
+            transition: all .2s linear;
+        }
+        .menu_cir>img{
+            position: absolute;
+            right: 0;
+            top:0;
+        }
+        .menu>.menu_son li:hover>.menu_cir{
+            opacity: 1;
+        }
+        .menu_bot{
+            position: absolute;
+            height: 60px;
+            width: 470px;
+            left: 448px;
+            bottom: 40px;
+        }
+        .ic{
+            width: 94px;
+            height: 60px;
+            position: absolute;
+            /*transition: all .2s linear;*/
+            cursor: pointer;
+            border-bottom: solid 3px #a8a8a8;
+        }
+        .i1{
+            left: 0;
+            background-image: url("../images/ic_spr_01.png");
+            background-position: 20px 0;
+        }
+        .i2{
+            left:94px;
+            background-image: url("../images/ic_spr_02.png");
+            background-position: 5px 0;
+        }
+        .i3{
+            left:188px;
+            background-image: url("../images/ic_spr_03.png");
+            background-position: 10px 0;
+        }
+        .i4{
+            left:282px;
+            background-image: url("../images/ic_spr_04.png");
+            background-position: 10px 0;
+        }
+        .i5{
+            left:376px;
+            background-image: url("../images/ic_spr_05.png");
+            background-position: 10px 0;
+        }
+        .txt{
+            transition: all .15s linear;
+        }
+        .ctx1{
+            position: absolute;
+            left: 530px;
+            top:100px;
+            opacity: 1;
+        }
+        .ctx1>img{
+            height: 70px;
+        }
+        .ck{
+            width: 100px;
+            height: 25px;
+            font-size: 14px;
+            text-align: center;
+            line-height: 25px;
+            cursor: pointer;
+        }
+        .ck1{
+            border: solid 1px black;
+            margin: 40px auto 0 auto;
+        }
+        .ctx2{
+            position: absolute;
+            left: 480px;
+            top:120px;
+            opacity: 0;
+        }
+        .ctx2>img{
+            height: 40px;
+        }
+        .ck2{
+            border: solid 1px #ffffff;
+            color: white;
+            margin: 10px auto 0 auto;
+        }
+        .ctx3{
+            position: absolute;
+            left: 480px;
+            top:120px;
+            opacity: 0;
+        }
+        .ctx3>img{
+            height: 40px;
+        }
+        .ck3{
+            border: solid 1px black;
+            color: black;
+            margin: 20px auto 0 auto;
+        }
+        .ctx4{
+            position: absolute;
+            left: 635px;
+            top:120px;
+            opacity: 0;
+        }
+        .ctx4>img{
+            width: 60px;
+            margin-left: 22px;
+        }
+        .ck4{
+            border: solid 1px white;
+            color: white;
+            margin: 20px auto 0 auto;
+        }
+        .ctx5{
+            position: absolute;
+            left: 530px;
+            top:120px;
+            opacity: 0;
+        }
+        .ctx5>img{
+            height: 50px;
+        }
+        .ck5{
+            border: solid 1px white;
+            color: white;
+            margin: 20px auto 0 auto;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div class="menu">
+        <div class="menu_top">
+            <div class="menu_img">
+                <img src="../img/head_spr.png" alt="">
+            </div>
+            <span>更多</span>
+        </div>
+        <div class="menu_son">
+            <ul>
+                <li>
+                    <div class="menu_cir">
+                        <img src="../img/head_spr.png" alt="">
+                    </div>
+                    jquery
+                </li>
+                <li>
+                    <div class="menu_cir">
+                        <img src="../img/head_spr.png" alt="">
+                    </div>
+                    赚钱宝
+                </li>
+                <li>
+                    <div class="menu_cir">
+                        <img src="../img/head_spr.png" alt="">
+                    </div>
+                    新闻动态
+                </li>
+                <li>
+                    <div class="menu_cir">
+                        <img src="../img/head_spr.png" alt="">
+                    </div>
+                    人力资源
+                </li>
+                <li>
+                    <div class="menu_cir">
+                        <img src="../img/head_spr.png" alt="">
+                    </div>
+                    投资关系
+                </li>
+                <li>
+                    <div class="menu_cir">
+                        <img src="../img/head_spr.png" alt="">
+                    </div>
+                    关于jquery
+                </li>
+                <li>
+                    <div class="menu_cir">
+                        <img src="../img/head_spr.png" alt="">
+                    </div>
+                    联系我们
+                </li>
+                <li>
+                    <div class="menu_cir">
+                        <img src="../img/head_spr.png" alt="">
+                    </div>
+                    关于jquery
+                </li>
+                <li>
+                    <div class="menu_cir">
+                        <img src="../img/head_spr.png" alt="">
+                    </div>
+                    公司简介
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="txt ctx1">
+        <div id="div">
+            <img src="../images/circle.png">
+            <p id="title">九寨沟风景区</p>
+            <div id="desc">
+                <p> 九寨沟是世界自然遗产，国家重点风景名胜区，国家AAAAA级景区，国
+                    家级自然保护区，国家地质公园，世界生物圈保护区网络，是中国第一个
+                    以保护自然风景为主要目的的自然保护区。</p>
+
+            </div>
+            <p id="pure">纯净心灵的美丽触手可及</p>
+        </div>
+    </div>
+    <div class="txt ctx2">
+        <img src="../img/txt_5.png" alt="">
+        <div class="ck ck2">查看详情</div>
+    </div>
+    <div class="txt ctx3">
+        <img src="img/txt_4.png" alt="">
+        <div class="ck ck3">查看详情</div>
+    </div>
+    <div class="txt ctx4">
+        <img src="img/txt_2.png" alt="">
+        <div class="ck ck4">查看详情</div>
+    </div>
+    <div class="txt ctx5">
+        <img src="img/txt_3.png" alt="">
+        <div class="ck ck5">查看详情</div>
+    </div>
+    <div class="txt ctx2"></div>
+    <div class="txt ctx3"></div>
+    <div class="txt ctx4"></div>
+    <div class="txt ctx5"></div>
+    <div class="menu_bot">
+        <div class="ic i1"></div>
+        <div class="ic i2"></div>
+        <div class="ic i3"></div>
+        <div class="ic i4"></div>
+        <div class="ic i5"></div>
+    </div>
+</section>
+<script src="../js/jquery-3.1.1.js"></script>
+<script>
+    $(document).ready(function () {
+        var off=true;
+        var i=2;
+        var st=setInterval(change,5000);
+        function change() {
+            if(i===1){
+                $(".i1").trigger("click");
+            }
+            else if(i===2){
+                $(".i2").trigger("click");
+            }
+            else if(i===3){
+                $(".i3").trigger("click");
+            }
+            else if(i===4){
+                $(".i4").trigger("click");
+            }
+            else if(i===5){
+                $(".i5").trigger("click");
+            }
+            if(i>5){
+                i=1;
+            }
+        }
+        //绑定点击事件
+        function myClick() {
+            if(off===true){
+                off=false;
+                var index=$(this).index();
+                var a1="20px -15px";
+                var a2="5px -15px";
+                var a3="10px -17px";
+                var a4="10px -15px";
+                var s1="20px 0";
+                var s2="5px 0";
+                var s5="10px 0";
+                if(index===0){
+                    $(this).css("background-position",a1);
+                    $(".i2").css("background-image","url('images/ic_spr_02.png')");
+                    $(".i3").css("background-image","url('images/ic_spr_03.png')");
+                    $(".i4").css("background-image","url('images/ic_spr_04.png')");
+                    $(".i5").css("background-image","url('images/ic_spr_05.png')");
+                    $(".i2").css("background-position",s2);
+                    $(".i3").css("background-position",s5);
+                    $(".i4").css("background-position",s5);
+                    $(".i5").css("background-position",s5);
+                }
+                else if(index===1){
+                    $(this).css("background-position",a2);
+                    $(".i1").css("background-image","url('images/ic_spr_01.png')");
+                    $(".i3").css("background-image","url('images/ic_spr_03.png')");
+                    $(".i4").css("background-image","url('images/ic_spr_04.png')");
+                    $(".i5").css("background-image","url('images/ic_spr_05.png')");
+                    $(".i1").css("background-position",s1);
+                    $(".i3").css("background-position",s5);
+                    $(".i4").css("background-position",s5);
+                    $(".i5").css("background-position",s5);
+                }
+                else if(index===2){
+                    $(this).css("background-position",a3);
+                    $(".i2").css("background-image","url('images/ic_spr_02.png')");
+                    $(".i1").css("background-image","url('images/ic_spr_01.png')");
+                    $(".i4").css("background-image","url('images/ic_spr_04.png')");
+                    $(".i5").css("background-image","url('images/ic_spr_05.png')");
+                    $(".i1").css("background-position",s1);
+                    $(".i2").css("background-position",s2);
+                    $(".i4").css("background-position",s5);
+                    $(".i5").css("background-position",s5);
+                }
+                else if(index===3){
+                    $(this).css("background-position",a4);
+                    $(".i2").css("background-image","url('images/ic_spr_02.png')");
+                    $(".i3").css("background-image","url('images/ic_spr_03.png')");
+                    $(".i1").css("background-image","url('images/ic_spr_01.png')");
+                    $(".i5").css("background-image","url('images/ic_spr_05.png')");
+                    $(".i1").css("background-position",s1);
+                    $(".i2").css("background-position",s2);
+                    $(".i3").css("background-position",s5);
+                    $(".i5").css("background-position",s5);
+                }
+                else if(index===4){
+                    $(this).css("background-position",a4);
+                    $(".i2").css("background-image","url('images/ic_spr_02.png')");
+                    $(".i3").css("background-image","url('images/ic_spr_03.png')");
+                    $(".i4").css("background-image","url('images/ic_spr_04.png')");
+                    $(".i1").css("background-image","url('images/ic_spr_01.png')");
+                    $(".i1").css("background-position",s1);
+                    $(".i2").css("background-position",s2);
+                    $(".i3").css("background-position",s5);
+                    $(".i4").css("background-position",s5);
+                }
+                $(this).css("background-image","url('images/ic_spr_"+(index+7)+".png')");
+                $(".ic").css("border-bottom","solid 3px #bfbfbf");
+                $(this).css("border-bottom","solid 3px #ffffff");
+                $("section").css("background-image","url('../images/banner_"+(index+1)+".png')");
+                $(".txt").css("opacity","0");
+                $(".ctx"+(index+1)+"").delay(500).animate({
+                    "opacity":"1"
+                });
+                i=index+2;
+                setTimeout(function () {
+                    off=true;
+                },800);
+            }
+
+        }
+        $(".ic").bind("click",myClick);
+        //定时器
+        $(".ic").mouseover(function () {
+            clearInterval(st);
+        });
+        $(".ic").mouseout(function () {
+            st=setInterval(change,5000);
+        });
+    });
+</script>
+</body>
+</html>

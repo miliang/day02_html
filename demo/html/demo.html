@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #showImg{
+            width: 600px;
+            height: 375px;
+            /*outline:2px solid black;*/
+        }
+        #showImg>img{
+            width: 600px;
+        }
+        .demo>img{
+            margin-top: 10px;
+            width: 200px;
+            padding: 5px;
+            outline: 1px solid gray;
+        }
+        .div1{
+            position: absolute;
+            line-height: 22px;
+            height: 58px;
+            background-color: #ff0000;
+        }
+    </style>
+    <link rel="stylesheet" href="../fonts/css/font-awesome.css">
+</head>
+<body>
+    <div id="showImg">
+        <img src="../images/zhiai.jpg" alt="">
+    </div>
+    <div class="demo">
+        <img src="../images/14.jpg" alt="">
+        <img src="../images/17.jpg" alt="">
+        <img src="../images/125.jpg" alt="">
+        <img src="../images/126.jpg" alt="">
+        <img src="../images/3972174871357670772.jpg" alt="">
+        <img src="../images/128_1.jpg" alt="">
+        <img src="../images/134_1.jpg" alt="">
+        <img src="../images/135_1.jpg" alt="">
+
+    </div>
+    <div class="div">
+        <span class="fa-calendar-minus-o"></span>
+        <i class="fas fa-angle-left"></i>
+    </div>
+    <script>
+        var showImg=document.getElementById("showImg");
+        var smallImg=document.getElementsByClassName("demo");
+        var gg=smallImg[0].getElementsByTagName("img");
+        for(var i=0;i<gg.length;i++){
+            var small=gg[i];
+            small.onclick=function (obj) {
+//                event=event||window.event;
+//                smallImg.style.display="block";
+                var a=this.src;
+                console.log(a);
+                var ss=a.split("/");
+                console.log(ss[ss.length-1]);
+                showImg.innerHTML='<img src="../images/'+ss[ss.length-1]+'"/>';
+
+            }
+            console.log(Object===Object);
+            console.log(Object==Object);
+        }
+    </script>
+<div class="div1">
+    hdfhdsgf
+</div>
+<h1>jhfdsjfhds</h1>
+</body>
+</html>

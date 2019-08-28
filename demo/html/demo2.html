@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<span class = "reduce"><</span>
+<span class = "value">1</span>
+<span class = "plus" >></span>
+<script src="../jquery-1.11.3.js"></script>
+<script>
+    $('.reduce').on('click',function(){
+        var dom = $(this).next('.value');
+        var value = dom.text();
+        value = parseInt(value,10);
+        if(value==1){
+            value=1;
+        }else{
+            value -= 1;
+        }
+
+        dom.text(value)
+    });
+    $('.plus').on('click',function(){
+        var dom = $(this).prev('.value');
+        var value = dom.text();
+        value = parseInt(value,10);
+        value += 1;
+        dom.text(value)
+    })
+</script>
+</body>
+</html>

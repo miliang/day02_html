@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        padding:0;
+        margin: 0;
+    }
+    figure{
+        width: 50%;
+        height: 340px;
+        float: left;
+        overflow: hidden;
+        position: relative;
+    }
+    figure img{
+        transition: all .3s;
+    }
+    figure:hover img{
+        opacity: .5;
+    }
+    .view:hover{
+        transform: translateX(50px);
+    }
+    .view1 img,.view2 img{
+        transition: all 1s;
+    }
+    .view1:hover img{
+        transform: scale(1.2);
+    }
+    .view2:hover img{
+        transform: scale(1.2) rotate(5deg);
+    }
+    .view1 h2,.view2 h2{
+        position: absolute;
+        top: 20px;
+        left:30px;
+        color: white;
+        transition: all 1s;
+    }
+    .view1:hover h2,.view2:hover h2{
+        transform: translate(50px);
+    }
+    .view1 .box1{
+        position: absolute;
+        width: 110%;
+        height: 340px;
+        left: 0;
+        background: greenyellow;
+        bottom: -340px;
+    }
+    div{
+        transition: all 2s;
+    }
+    .view1:hover .box1{
+        transform: rotate(-20deg);
+        transform-origin: 0 0;
+    }
+    .view2 .box2{
+        position: absolute;
+        width: 40%;
+        height: 60%;
+        left: 5%;
+        top:5%;
+        border: 2px solid black;
+        transform-origin: 0 0;
+        transform: rotate(0deg) translate(-600px);
+    }
+    .view2:hover .box2{
+        transform: rotate(360deg) translateY(0);
+    }
+</style>
+<body>
+    <div class="box">
+        <figure class="view1">
+            <img src="../images/1.jpg" alt="">
+            <figcaption>
+                <h2>念旧的皮箱装着</h2>
+            </figcaption>
+            <div class="box1"></div>
+        </figure>
+
+
+        <figure class="view2">
+            <img src="../images/2.jpg" alt="">
+            <figcaption>
+                <h2>雨中我燃一首挽歌</h2>
+            </figcaption>
+            <div class="box2"></div>
+        </figure>
+
+    </div>
+</body>
+</html>

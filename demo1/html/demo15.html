@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*.carousel{*/
+            /*width: 1500px;*/
+            /*height: 662px;*/
+            /*overflow: hidden;*/
+            /*position: relative;*/
+        /*}*/
+        #box{
+            position: relative;
+            width: 1349px;
+            height: 654px;
+            background-image: url("../../design/images/banner_1.png");
+            background-size: 1349px;
+        }
+
+        #box>div{
+            float: left;
+            width: 1500px;
+            height: 662px;
+            position: relative;
+
+        }
+        #div{
+            position: relative;
+            margin:150px 0 0 100px;
+            width: 370px;
+            height: 370px;
+            border-radius: 370px;
+        }
+        #div img{
+            /*width: 100%;*/
+        }
+        #div p{
+            position: absolute;
+            color: white;
+            font-family: "微软雅黑";
+            z-index: 9;
+        }
+        #title{
+            position: absolute;
+            font-size: 32px;
+            /*margin:30px 0 0 70px;*/
+            top:30%;
+            left:40%;
+        }
+        #desc{
+            position: absolute;
+            width: 300px;
+            height: 120px;
+            /*outline: 1px solid salmon;*/
+            font-size: 14px;
+            /*margin: 30px 0 0 55px;*/
+            top:30%;
+            left: 7%;
+            letter-spacing: 3px;
+        }
+        #pure{
+            position: absolute;
+            top:65%;
+            font-size: 32px;
+            color: white;
+            /*margin-top: 30px;*/
+            overflow: hidden;
+        }
+
+        img{
+            height: 662px;
+        }
+
+        .animate1{
+            animation: donghua1 2s forwards;
+        }
+        @keyframes donghua1 {
+            from{
+                margin-left: 0;
+            }
+            to{
+                margin-left: -1500px;
+            }
+        }
+        .replaylist{
+            position: absolute;
+            bottom: 5px;
+            left: 100px;
+            list-style: none;
+        }
+        li{
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+            border-radius: 10px;
+            background-color: white;
+            float: left;
+            text-align: center;
+            cursor: pointer;
+        }
+        .activeli{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+<div class="carousel">
+    <div id="box">
+        <!--<div id="div1">-->
+            <!--<img src="../images/banner_1.png" alt=""/>-->
+    </div>
+        <!--<div id="div2"><img src="../images/banner_2.png" alt=""/></div>-->
+        <!--<div id="div3"><img src="../images/banner_3.png" alt=""/></div>-->
+        <!--<div id="div4"><img src="../images/banner_4.png" alt=""/></div>-->
+        <!--<div id="div5"><img src="../images/banner_5.png" alt=""/></div>-->
+        <!--<div id="div6"><img src="../images/banner_6.png" alt=""/></div>-->
+        <!--<div id="div7"><img src="../images/banner_7.png" alt=""/></div>-->
+    </div>
+    <div id="div">
+        <img src="../../design/images/circle.png">
+        <p id="title">九寨沟风景区</p>
+        <div id="desc">
+            <p> 九寨沟是世界自然遗产，国家重点风景名胜区，国家AAAAA级景区，国
+                家级自然保护区，国家地质公园，世界生物圈保护区网络，是中国第一个
+                以保护自然风景为主要目的的自然保护区。</p>
+
+        </div>
+        <p id="pure">纯净心灵的美丽触手可及</p>
+    </div>
+<div id="div2">
+    <h3>九寨沟</h3>
+    <p id="dream">梦 <span>幻</span></p>
+    <p id="visit">旅 </p>
+    <p id="swim">游</p>
+    <p id="shape"></p>
+    <div>
+        <p>
+            九寨沟县，隶属于四川省阿坝州藏族羌族自治州，位于青藏高原东部边缘，
+            阿坝州东北部，东、北与甘肃省文县、舟曲县、迭部县交界，西、南与四川
+            省若尔盖县、平武县、松潘县接壤。九寨沟县辖15个乡镇，户籍人口67945人。
+        </p>
+        <p>
+            九寨沟县地势西北、西南高，东南低。属高原湿润气候。境内拥有获“世界自
+            然遗产”、“世界生物圈保护区”、“绿色环球21”三项国际桂冠和世界首批
+            5A级风景名胜区称号的九寨沟，还有省级勿角大熊猫自然保护区、白河金丝猴
+            自然保护区、甘海子国家森林公园和神仙池风景区、甲午天池、杜鹃山、勿角
+            白马藏族风情园等众多生态人文资源。2007年被命名为“中国旅游强县”！
+        </p>
+    </div>
+</div>
+    <ul class="replaylist">
+        <li onclick="replay(1)">1</li>
+        <li onclick="replay(2)">2</li>
+        <li onclick="replay(3)">3</li>
+        <li onclick="replay(4)">4</li>
+        <li onclick="replay(5)">5</li>
+        <li onclick="replay(6)">6</li>
+        <li onclick="replay(7)">7</li>
+    </ul>
+</div>
+<script src="../../design/js/jquery-3.1.1.js"></script>
+<script>
+    //    var oDiv=[];
+    //    for(var i=1;i<=3;i++){
+    //        oDiv[i]=document.getElementById("div"+[i]);
+    //    }
+    var bg = ['../images/banner_1.png','../images/banner_2.png','../images/banner_3.png','../images/banner_4.png',
+    '../images/banner_5.png','../images/banner_6.png','../images/banner_7.png'];
+    var index =0;
+    var banner =$('#box');
+    banner.get(0).style.backgroundImage = 'url('+bg[0]+')';
+    var time = setInterval(dis,2000);
+    function dis() {
+        index++;
+        if(index == bg.length){
+            index = 0;
+        }
+        banner.get(0).style.backgroundImage = 'url('+bg[index]+')';
+    }
+//    var oDiv1=document.getElementById("div1");
+//    var oDiv2=document.getElementById("div2");
+//    var oDiv3=document.getElementById("div3");
+//    var oDiv4=document.getElementById("div4");
+//    var oDiv5=document.getElementById("div5");
+//    var oDiv6=document.getElementById("div6");
+//    var oDiv7=document.getElementById("div7");
+//    var ParentDiv=document.getElementsByClassName("box")[0];
+//
+//    var oUl=document.getElementsByClassName("replaylist")[0];
+//    var oliList=oUl.getElementsByTagName("li");
+
+//    var number=1;//控制轮播的idv
+//
+//    var temp;//控制圆点
+//
+//    var myInterval;
+//
+//    window.onload=function(){
+////        myInterval=setInterval(replay,2000);
+//    };
+//    //初始化
+//    function init(){
+//        for(var i=1;i<=7;i++){
+//            document.getElementById("div"+i).className="";
+//            oliList[i-1].className="";
+//        }
+//    }
+//
+//    function replay(index){
+//        init();
+//
+//        console.log(temp);
+//        if(index!=undefined){
+//            if(index==1){
+//                moveRight(oDiv7);
+//            }else if(index==2){
+//                moveRight(oDiv1);
+//            }else if(index==3){
+//                moveRight(oDiv2);
+//            }else if(index==4){
+//                moveRight(oDiv3);
+//            }else if(index==5){
+//                moveRight(oDiv4);
+//            }else if(index==6){
+//                moveRight(oDiv5);
+//            }else if(index==7){
+//                moveRight(oDiv6);
+//            }
+//            document.getElementById("div"+index).className="animate1";
+//            oliList[index-1].className="activeli";
+//        }else{
+//            document.getElementById("div"+number).className="animate1";
+//
+//            temp=number;
+//
+//            if(number==7){temp=0}
+//            oliList[temp].className="activeli";
+//
+//            if(number==1){
+//                moveRight(oDiv7);
+//            }else if(number==2){
+//                moveRight(oDiv1);
+//            }else if(number==3){
+//                moveRight(oDiv2);
+//            }else if(number==4){
+//                moveRight(oDiv3);
+//            }else if(number==5){
+//                moveRight(oDiv4);
+//            }else if(number==6){
+//                moveRight(oDiv5);
+//            }else if(number==7){
+//                moveRight(oDiv6);
+//            }
+//
+//            number++;
+//            if(number>7){
+//                number=1;
+//            }
+//        }
+//        /*给指定div加动画，div滑动*/
+//
+//    }
+//    function moveRight(obj){
+//        ParentDiv.appendChild(obj)
+//    }
+//
+//    /*onmouseenter只在指定对象上触发
+//     * onmouseover在子元素上也会触发*/
+//    var carousel=document.getElementsByClassName("carousel")[0];
+//    carousel.onmouseenter= function () {
+//        console.log(11111);
+//        clearInterval(myInterval);
+//    };
+//    carousel.onmouseleave= function () {
+//        console.log(22222);
+////        myInterval=setInterval(replay,2000);
+//    }
+</script>
+</body>
+</html>

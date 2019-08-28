@@ -1,0 +1,163 @@
+*{
+    padding:0;
+    margin: 0;
+    font-family: "微软雅黑";
+}
+header{
+    width: 100%;
+    height: auto;
+    background-color:rgb(17 , 47, 71) ;
+    color: white;
+}
+.top{
+    width: 100%;
+    height: 8rem;
+    line-height:8rem;
+    text-align: center;
+    outline: 1px solid red;
+}
+.top>span{
+    font-size: 3.5rem;
+    margin: 0 30% 0 30%;
+}
+.fa-angle-left{
+    font-size: 6rem;
+}
+.fa-calendar{
+    font-size: 4rem;
+}
+.nav{
+    width: 100%;
+    height: 9rem;
+    text-align: center;
+    background-color: rgb(19 ,53 ,80);
+}
+.nav>ul{
+    list-style: none;
+}
+.nav>ul li{
+    color: #f4f5f6;
+    float: left;
+    font-size: 2.3rem;
+    width: 19.9%;
+    height: 5rem;
+    line-height: 5rem;
+    margin-top: 2rem;
+    text-align: center;
+}
+.nav>ul li:nth-child(1),.nav>ul li:nth-child(2),.nav>ul li:nth-child(3),.nav>ul li:nth-child(4){
+    border-right: 1px solid #1c577c;
+}
+.nav>ul li:last-child{
+    color: #01cd9a;
+}
+.ck{
+    width: 20%;
+    height: 10px;
+    background-color: #01cd9a;
+}
+#main{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin-left: 35%;
+}
+#first{
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    transform: rotate(348deg);
+    clip:rect(0,120px,240px,0);
+    border-radius: 120px;
+    background-image: linear-gradient(to bottom,#76edf5,#3d8df6);
+}
+#second{
+    position: absolute;
+    width: 240px;
+    height: 220px;
+    transform: rotate(220deg);
+    clip:rect(0,120px,240px,0);
+    border-radius: 100px;
+    background-image: linear-gradient(to bottom,#f086ea,#3e6bd0);
+}
+#three{
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    transform: rotate(143deg);
+    clip:rect(0,120px,240px,0);
+    border-radius: 120px;
+    background-image: linear-gradient(to bottom,#b0feab,#04ce9a);
+}
+#last{
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    transform: rotate(92deg);
+    clip:rect(0,120px,240px,0);
+    border-radius: 120px;
+    background-image: linear-gradient(to bottom,#ffc371,#ff746e);
+}
+ p{
+     position: absolute;
+    margin-top: 85%;
+     margin-left: 15%;
+     font-size: 2.3rem;
+}
+.bottom{
+    width: 100%;
+    height:auto;
+}
+table{
+    width: 48%;
+    height: auto;
+    text-align: center;
+    font-size: 2.3rem;
+    float: left;
+    margin-top: 5%;
+}
+table>tbody>tr{
+    width: 45%;
+    height: auto;
+    color: #7f7f7f;
+}
+table>tbody>tr>td{
+    width: 25%;
+    height: auto;
+    /*outline: 2px solid springgreen;*/
+    padding: 2%;
+}
+td>span{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 30%;
+    margin-left: 6%;
+    height: 15px;
+}
+.view>span{
+    background-image:linear-gradient(to right,#76edf5,#3d8df6);
+}
+.server>span{
+    background-image: linear-gradient(to right,#ffc371,#ff746e);
+}
+.person>span{
+    background-image: linear-gradient(to right,#b0feab,#04ce9a);
+}
+.money>span{
+    background-image: linear-gradient(to right,#f086ea,#3e6bd0);
+}
+table>tbody>tr:nth-child(3n){
+    font-size: 1.8rem;
+}
+table>tbody>tr:nth-child(2)>td:nth-child(2n){
+    font-weight: bold;
+}
+table>tbody>tr:nth-child(5)>td:nth-child(2n){
+    font-weight: bold;
+}
+table:nth-child(1),table:nth-child(2){
+    border-bottom: 1px solid #cccccc;
+}
+table:nth-child(1),table:nth-child(3){
+    border-right: 1px solid #cccccc;
+}

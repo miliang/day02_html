@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/*=====================导航===================*/
+#logo{
+    width: 200px;
+}
+#logo>img{
+    width: 80%;
+    margin-left: 16%;
+}
+ul{
+    height: 30px;
+    margin-left: 20%;
+    margin-top: -4%;
+}
+ul>li{
+    background-color: rgba(0, 89, 126, 0.69);
+    color:white;
+    width: 12%;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    margin-right: 5px;
+    font-size: 20px;
+    list-style: none;
+    outline: 1px solid red;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.active{
+    color: #01cd9a;
+}
+section{
+    clear: both;
+    margin-top: 2%;
+    width: 100%;
+    height: auto;
+    background-color: rgba(229, 229, 229, 0.51);
+    font-family: "微软雅黑";
+
+}
+/*====================标题————九寨沟=========================*/
+.introduction{
+    width: 90%;
+    height: auto;
+    margin-left: 5%;
+    background-color: white;
+    box-shadow:0 0 4px 4px #ccc inset;
+}
+.introduction>div{
+    display: inline-block;
+}
+.desc{
+    width: 70%;
+    height: 400px;
+    float: left;
+}
+h3{
+    color: #1d1d1d;
+    font-size: 36px;
+    margin-left:5%;
+}
+p{
+    width: 90%;
+    margin: 2% 0 0 5%;
+    letter-spacing: 2px;
+    font-size: 16px;
+}
+.desc_img{
+    position: relative;
+    top:30%;
+    left: 3%;
+    width: 30%;
+    height:200px;
+    float: left;
+}
+.desc_img>img{
+    position: absolute;
+    width: 70%;
+    top:30%;
+}
+.desc_img>img:nth-of-type(n):hover{
+    transform: scale(1.5);
+    transition: all 0.7s linear;
+}
+.desc_img>img:hover{
+    z-index: 10;
+    /*transform: rotate(10deg);*/
+    /*transform: scale(2);*/
+    transition: all 0.7s linear;
+}
+
+.desc_img>img:first-child{
+    transform: rotate(30deg);
+}
+.desc_img>img:nth-of-type(2){
+    transform: rotate(-30deg);
+}
+.desc_img>img:nth-of-type(3){
+    transform: rotate(45deg);
+}
+h4{
+    margin-left: 5%;
+    margin-top: 1%;
+}
+.img>img:first-child{
+    transform: scale(0.9);
+    margin-top: -50px;
+    margin-left: 15px;
+}
+.imgs>img:first-child{
+    transform: scale(.9);
+    margin-top: -56px;
+    margin-left: 15px;
+}

@@ -1,0 +1,91 @@
+<div class="top">
+    <ul>
+        <li class="phone">
+            <a href="#">手机</a>
+            <span class="arrow"></span>
+            <div class="t-pop"></div>
+        </li>
+        <li>
+            服务
+            <span class="arrow"></span>
+        </li>
+        <div class="clearfloat"></div>
+    </ul>
+</div>
+
+<style>
+    a {
+        text-decoration: none;
+    }
+    .clearfloat {
+        clear: both;
+        height: 0;
+        font-size: 1px;
+        line-height: 0px;
+    }
+    ul {
+        width: 300px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background-color: #ACE2AC;
+        border-bottom: 1px solid #EEEEEE;
+    }
+    ul li {
+        padding: 0px 50px;
+        border-left: 1px solid #eee;
+        border-right: 1px solid #eee;
+        height: 50px;
+        line-height: 50px;
+        float: left;
+        color: #666;
+    }
+    ul li a {
+        color: #666;
+    }
+    ul li a:hover {
+        color: #E4393C;
+        text-decoration: underline;
+    }
+    ul li.phone {
+        position: relative;
+    }
+    ul li span {
+        display: block;
+        position: absolute;
+        margin-top: -28px;
+        margin-left: 40px;
+        width: 0;
+        height: 0;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #666 transparent transparent transparent;
+    }
+    ul li div {
+        position: absolute;
+        width: 98px;
+        height: 28px;
+        top: 10px;
+        left: 15px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+    }
+    ul li a {
+        position: relative;
+        color: #666;
+        z-index: 10;
+    }
+    ul li span {
+        position: relative;
+        display: block;
+        position: absolute;
+        margin-top: -28px;
+        margin-left: 40px;
+        width: 0;
+        height: 0;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #666 transparent transparent transparent;
+        z-index: 10;
+    }
+</style>

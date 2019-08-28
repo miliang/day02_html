@@ -1,0 +1,93 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+/*栅格化*/
+.container-fluid{
+    /*outline: 1px solid red;*/
+}
+/*标题*/
+h5{
+    font-size: 20px;
+}
+/*问题模块*/
+.header{
+    width: 100%;
+    height: 630px;
+    background-image: url("../images/zhiai.jpg");
+    background-size: 65%;
+    background-repeat: no-repeat;
+}
+li{
+    padding-top: 20px;
+    height: 50px;
+    list-style: none;
+    border-bottom: 1px solid #c5c5c5;
+    border-top: 1px solid #c5c5c5;
+    overflow: hidden;
+}
+.q1{
+    border-top: none;
+}
+/*i标签*/
+i{
+    margin-left:10px ;
+    margin-top: 20px;
+    font-size: 50px;
+}
+/*问题题目*/
+h6{
+    /*outline: 1px solid cyan;*/
+    margin-top: -25px;
+    display: inherit;
+    margin-left: 10%;
+    padding-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+/*答案*/
+p{
+   width: 100%;
+    margin-left: 10%;
+    font-size: 16px;
+}
+/*[订阅鲜花]*/
+.answer>span{
+    font-weight: bolder;
+}
+.box{
+    /*display: none;*/
+
+}
+a{
+    margin-left: 10%;
+    color: #080808;
+}
+font{
+    display: block;
+}
+/*媒体查询器*/
+@media screen and (min-width: 1200px){
+    h6{
+        font-size: 18px;
+    }
+    .answer{
+        font-size: 16px;
+    }
+}
+@media screen and (min-width:768px) and (max-width: 1200px){
+    h6{
+        font-size: 16px;
+    }
+    .answer{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:768px) {
+    h6{
+        font-size: 14px;
+    }
+    .answer{
+        font-size: 12px;
+    }
+}

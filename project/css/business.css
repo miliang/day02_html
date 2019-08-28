@@ -1,0 +1,48 @@
+*{
+    padding:0;
+    margin: 0;
+}
+body{
+background-color: honeydew;
+}
+h4{
+    margin-top: 60px;
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+.col-lg-12 {
+     padding-right: 0px;
+     padding-left: 0px;
+}
+.server_01{
+    margin-top: 50px;
+}
+.desc{
+    position: absolute;
+    top:50px;
+    left: 20px;
+    border: 1px solid black;
+    background-color: #385266;
+    color: #c8b06f;
+    width: 300px;
+    height: 270px;
+}
+h5{
+    margin-top: 30px;
+    font-size: 18px;
+}
+li{
+    height: 30px;
+    margin-left: 30px;
+    padding-top: 5px;
+    list-style: none;
+    font-size: 16px;
+}
+.desc_02{
+    top:1330px;
+}
+.ser_02{
+    margin-top: 50px;
+}

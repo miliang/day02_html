@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    .box{
+        width: 900px;
+        /*盒子居中*/
+        margin: 0 auto;
+    }
+    .left{
+        width: 300px;
+        float: left;
+    }
+    .left div{
+        height: 300px;
+        background-color: green;
+        border: 1px solid white;
+    }
+    .content{
+        width: 300px;
+        float: left;
+    }
+    .content div{
+        height: 200px;
+        background-color: yellowgreen;
+        border: 1px solid white;
+    }
+    .right{
+        width: 300px;
+        float: left;
+    }
+    .right div{
+        height: 300px;
+        background-color: green;
+        border:1px solid white;
+    }
+</style>
+<body>
+    <!--最外层的div-->
+    <div class="box">
+        <div class="left">
+            <div></div>
+            <div></div>
+        </div>
+        <div class="content">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="right">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>

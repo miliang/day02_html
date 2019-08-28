@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<link rel="stylesheet" href="../css/index.css">
+<body>
+    <section>
+        <header>
+            <p>下午茶</p>
+        </header>
+        <footer>
+            <div>
+                <img src="../images/cake01.jpg" alt="">
+                <hr>
+                <p>下午茶1</p>
+            </div>
+            <div>
+                <img src="../images/cake02.jpg" alt="">
+                <hr>
+                <p>下午茶2</p>
+            </div>
+            <div>
+                <img src="../images/cake03.jpg" alt="">
+                <hr>
+                <p>下午茶3</p>
+            </div>
+        </footer>
+    </section>
+    <section>
+        <header>
+            <p>蛋糕</p>
+        </header>
+        <footer>
+            <div>
+                <img src="../images/cake_01.jpg" alt="">
+                <hr>
+                <p>蛋糕1</p>
+            </div>
+            <div>
+                <img src="../images/cake_02.jpg" alt="">
+                <hr>
+                <p>蛋糕2</p>
+            </div>
+            <div>
+                <img src="../images/cake_03.jpg" alt="">
+                <hr>
+                <p>蛋糕3</p>
+            </div>
+        </footer>
+    </section>
+    <section>
+        <header>
+            <p>糕点</p>
+        </header>
+        <footer>
+            <div>
+                <img src="../images/cake_new01.jpg" alt="">
+                <hr>
+                <p>糕点1</p>
+            </div>
+            <div>
+                <img src="../images/cake_new02.jpg" alt="">
+                <hr>
+                <p>糕点2</p>
+            </div>
+            <div>
+                <img src="../images/cake_new03.jpg" alt="">
+                <hr>
+                <p>糕点3</p>
+            </div>
+        </footer>
+    </section>
+</body>
+<script>
+    var foo='11'+2-'1';
+    console.log(foo);
+    console.log(typeof foo)
+    var stringArr = ['this','is','Baidu','Compus'];
+    alert(stringArr.join(''));
+
+    function combo(msg) {
+        var arr = msg.split("-");
+        for(var i = 1;i<arr.length;i++){
+            arr[i] = arr[i].charAt(0).toUpperCase()+arr[i].substr(1,arr[i].length-1);
+        }
+            msg = arr.join('');
+        return msg;
+    }
+    console.log(combo('get-element-by-id'));
+    var numberArr = [3,6,2,4,1,5];
+//    实现倒序排列
+    numberArr.reverse();
+    console.log(numberArr)
+
+//    实现降级排列
+    function sort() {
+        var i = j = t =0;
+        for(i = 0;i<numberArr.length;i++){
+            for(j = 0;j<numberArr.length;j++){
+                if(numberArr[i]>=numberArr[j]){
+                    t = numberArr[i];
+                    numberArr[i] = numberArr[j];
+                    numberArr[j] = t;
+                }
+            }
+        }
+        return numberArr;
+    }
+    console.log(sort(numberArr))
+
+//    function sort(a) {//排序
+//        var i = j = t = 0;
+//        for (i = 0; i < a.length; i++) {
+//            for (j = 0; j < a.length; j++) {
+//                if (a[i] >= a[j]) {
+//                    t = a[i];
+//                    a[i] = a[j];
+//                    a[j] = t;
+//                }
+//            }
+//        }
+//        return a;
+//    }
+//
+//    var arr = [12, 5, 232, 23, 45, 67, 89];
+//    // 从大到小排序
+//    var arr2 = sort(arr);
+//
+//    // 从小到大排序
+//    var str = arr2.reverse().join(",");
+//    alert(str);
+</script>
+</html>

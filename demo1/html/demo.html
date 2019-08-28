@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding:0;
+            margin: 0;
+            font-family: "微软雅黑";
+            font-size: 18px;
+        }
+        .box{
+            width:95%;
+            height:500px;
+            background-color: #7affa6;
+            text-align: center;
+            margin-left: 2.5%;
+        }
+        ul li{
+            margin-left: 6%;
+            width: 15%;
+            list-style: none;
+            padding: 20px;
+            float: left;
+            line-height: 1;
+            /*outline:1px solid red;*/
+        }
+        .active{
+            border-bottom: 1px solid #ff6b48;
+        }
+        .divList{
+            position: relative;
+            top:5%;
+            clear: both;
+            width: 89%;
+            height: 400px;
+            border: 1px solid silver;
+            margin-left: 5.5%;
+        }
+        .divList div{
+            position: absolute;
+            display: none;
+        }
+        .divList div:first-child{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="liList">
+            <ul>
+                <li class="active" onclick="add(this)">待发货</li>
+                <li onclick="add(this)">待收货</li>
+                <li onclick="add(this)">待付款</li>
+                <li onclick="add(this)">评价</li>
+            </ul>
+        </div>
+        <div class="divList">
+            <div class="content">
+                <p>我是第一个div</p>
+            </div>
+            <div class="content">
+                <p>我是第二个div</p>
+            </div>
+            <div class="content">
+                <p>我是第三个div</p>
+            </div>
+            <div class="content">
+                <p>我是第四个div</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../js/jquery-3.1.1.js"></script>
+    <script>
+        var li = $("li");
+        var div = $('.content');
+        var temp;
+        function add(obj) {
+            if(temp){
+                temp =0;
+                li.classList.remove('active');
+                li[obj].className = "active";
+                div.style.display = "none";
+                div.style.zIndex = 0;
+                div[obj].style.display = 'block';
+//            }else if(index == 1) {
+//                li.classList.remove('active');
+//                li[1].className = "active";
+////                div.style.display = "none";
+//                div.style.zIndex = 0;
+//                div[1].style.display = 'block';
+//            }else if(obj == 2){
+//                li[2].className = "active";
+////                div.style.display = "none";
+//                li.classList.remove('active');
+//                div[2].style.display = 'block';
+//                div.style.zIndex = 0;
+//            }else{
+                temp = 1;
+                li.classList.remove('active');
+                li[obj].className = "active";
+//                div.style.display = "none";
+                div.style.zIndex = 0;
+                div[obj].style.display = 'block';
+                div[obj].style.zIndex = 2;
+            }
+        }
+    </script>
+</body>
+</html>

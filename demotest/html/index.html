@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    p{
+        font-size: 20px;
+        color: pink;
+    }
+    div{
+        margin-bottom: 15px;
+        width: 200px;
+        height: 200px;
+        border: 5px solid black;
+        box-shadow: 10px 10px 10px hotpink;
+        text-align: center;
+        line-height: 200px;
+        border-radius: 50px;
+        transition: all 2s;
+    }
+    div:hover{
+        transform: scale(0.5);
+    }
+    .box{
+        background-color: #7affa6;
+        box-shadow: 5px 5px 5px 5px pink;
+    }
+    .jingjing{
+        background-color: #7affa6;
+        border-top:5px solid palegoldenrod;
+        border-bottom: 5px solid salmon;
+        border-left: 5px solid seagreen;
+        border-right: 5px solid navy;
+    }
+    .xiaoming .content{
+        background-color: #2aabd2;
+    }
+    .xiaoming .content:hover{
+        transform: rotate(180deg);
+    }
+    .xiaoming.content{
+        background-color: rebeccapurple;
+    }
+    .xiaoming.content:hover{
+        transform: rotate(180deg);
+    }
+</style>
+<body>
+    <p>你好世界</p>
+    <p>添加一个p标签</p>
+    <div class="box">盒子</div>
+    <div class="jingjing">静静</div>
+    <div class="xiaoming">
+        <div class="content">熊爱民</div>
+    </div>
+    <div class="xiaoming1">
+        <div class="content1">熊爱民</div>
+    </div>
+</body>
+</html>
